@@ -1,24 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Cloud Resume Challenge </title>
-        <link rel="icon" type="image/jpg" href="images/Profile.jpg">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta property="og:title" content="Antonio's Cloud Resume" />
+        <meta name="image" property="og:image" content="dist\assets\img\profile1.jpg">
+        <meta property="og:description" content="Antonio's portfolio, hosted in the AWS Cloud, built with Terraform. Automated front- and back-end with GitHub Actions workflows." />
+        <title>Antonio's Cloud Resume</title>
+        <link rel="icon" type="image/x-icon" href="dist/assets/img/profile1.jpg" />
+        
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="dist/css/styles.css" rel="stylesheet" />
+        
     </head>
-    <body>
-        <h1>This is an h1 heading</h1>
-        <hr>
-        <h2>This is an h2 heading</h2>
-        <h3>This is an h3 heading</h3>
-        <h4>This is an h4 heading</h4>
-        <h5>This is an h5 heading</h5>
-    
-    <img src="images/Profile.jpg"
-    height = "200"
-    alt="Profile Picture">
-    
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Antonio Rios</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2 w-100" src="dist/assets/img/profile1.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Certifications</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-3">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Antonio
+                        <span class="text-primary">Rios</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        New York, NY 11385 · <a href="mailto:AntonioRiosbusiness@gmail.com">AntonioRiosbusiness@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5">Hey there!👋🏼 I appreciate you stopping by to check out my cloud portfolio. I built this web app on AWS as part of the Cloud Resume Challenge.
+                        The front-end is using S3 to store the content for the webpage. I purchased the domain AntonioRios.com through Route 53 and directed traffic to a secure (HTTPS) CloudFront distribution.
+                        For the backend, it's using DynamoDB to keep track of how many people have visited this webpage. Each time the page is loaded,
+                        a Javascript function makes an API call to the API Gateway, which triggers a Lambda function to add +1 to the visit count in DynamoDB, and retrieve the current visit count to be displayed at the bottom of the page. 
+                        Lastly, the backend resources were provisioned with Terraform.  
+                    </p>
+                    <p class="lead mb-5">
+                        My professional background is in information technology.  
 
+                        If there's one thing I've realized about myself, is that I'm an excellent adapter. I welcome change, and I am motivated by the opportunity to learn and implement new skills, technologies,
+                        and ideas. I am eager to join a team that encourages continued education, professional development, and organizational success.
+                        I am lifelong learner and I am continuosly trying to improve my skillset as a professional and as a person I strive to become better than yesterday.
+                    </p>
+                    <div class="social-icons">
+                        <a target="_blank" title="Linkedin" class="social-icon" href="https://www.linkedin.com/in/AntonioRios17"><i class="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" title="Github Repository"class="social-icon" href="https://github.com/AntonioRios17"><i class="fab fa-github"></i></a>
+                        <a target="_blank" title="Credly"class="social-icon" href="https://www.credly.com/users/antonio-rios.01106fb0/badges"><i class="fas fa-trophy"></i></a>                        
+                        <a target="_blank" title="Resume File"class="social-icon" href="https://drive.google.com/file/d/1zrbBTaUIdll4dPSZY5gUw-HNGuJo4Ta1/view?usp=sharing"><i class="fa-solid fa-file-pdf"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Devops Engineer Apprentice</h3>
+                            <div class="subheading mb-3">Kura Labs - NY</div>
+                            <p><ul class="bullet-points"></ul>
+                                <li>Designed automated CI/CD pipelines using tools such as git, Jenkins, and AWS services to optimize the
+                                    software development process and reduce deployment time.</li>
+                                <li>Utilized Terraform to provision and manage AWS resources, including EC2 instances and load balancers,
+                                    and monitored their performance using CloudWatch and Datadog.</li> 
+                                <li>Containerized and deployed applications using Docker and Kubernetes to improve scalability and reduce
+                                    dependency issues.</li>
+                                <li>Created custom Python and bash scripts to automate infrastructure management tasks such as monitoring
+                                    resources and system updates.</li>
+                              </ul>
+                            </p>
 
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2022 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">IT Support Engineer</h3>
+                            <div class="subheading mb-3">Little Flower Children and Family Services of New York - NY</div>
+                            <p><ul class="bullet-points"></ul>
+                                <li>Managed all aspects of the organization's devices, including computers, laptops, mobile devices, and
+                                    printers, including a partner organization across multiple branch offices.</li>
+                                <li>Successfully identified and resolved issues with the SaaS Fax Solution deployed across multiple
+                                    locations, increasing productivity and eliminating physical fax machines across all sites.</li> 
+                                <li>Managed all tasks related to employee onboarding and terminations using proprietary software, Office365
+                                    and VoIP.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2021 - August 2022</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Data Analyst Apprentice</h3>
+                            <div class="subheading mb-3">COOP Careers - NY</div>
+                            <p><ul class="bullet-points"></ul>
+                                <li>Analyzed information regarding top eviction rates in zip codes across New York from OpendataNYC and
+                                    displayed the results using a Heatmap and bar charts with Tableau.</li>
+                                <li>Developed data analytics skills through hands-on training and experience in Excel, SQL, Python,
+                                    Tableau, and Google Analytics.</li> 
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">February 2022 - July 2022</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">New York City College Of Technology</h3>
+                            <div class="subheading mb-3">Bachelor of Technology</div>
+                            <p>Computer Engineering<br>
+                                Electro-Mechinical Engineering</p>
+                        </div>
+                        
+                        <div class="flex-shrink-0"><span class="text-primary"><br>
+                            <br>
+                            <br><br>August 2015 - January 2021<br>August 2015 - June 2020
+                        </div></span> <style>
+                            .flex-shrink-0 {
+                              text-align: right;
+                            }
+                          </style>
+                        
+                       </div>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                       
+                        <li class="list-inline-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/768px-Amazon_Web_Services_Logo.svg.png?20170912170050" alt="AWS Logo" class="skills-icons"  /></li>
+                        <li class="list-inline-item"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="Python Logo" class="skills-icons"  /></li>
+                        <li class="list-inline-item"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Github Logo" class="skills-icons"  /></li>
+                        <li class="list-inline-item"><img src="https://git-scm.com/images/logos/logomark-orange@2x.png" alt="Git Logo" class="skills-icons"  /></li>
+                        <li class="list-inline-item"><img src="https://www.svgrepo.com/show/354447/terraform-icon.svg" alt="Terraform Logo" class="skills-icons"  /></li>
+                        <li class="list-inline-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/UbuntuCoF.svg" alt="Ubuntu Logo" class="skills-icons"  /></li>
+                        <li class="list-inline-item"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg" alt="Jenkins Logo" class="skills-icons"  /></li>
+                        <li class="list-inline-item"><img src="https://www.svgrepo.com/show/349342/docker.svg" alt="Git Logo" class="skills-icons"  /></li>
 
+                    </ul>
+                    
+                    <div class="subheading mb-3">Workflow</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            DevOps Mindset
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Automate when Possible (Jenkins)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Infrastructure as Code (Terraform)
+                        </li>
+                        
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Communicate and Collaborate
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Continuous Improvement
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>When I'm not doing something cloud-related, I enjoy watching movies and tv shows. 
+                        I love playing music and going to play bowling with family. 
+                        I enjoy traveling and visiting new places, I have traveled to a couple of countries
+                        in the past and had great adventures and I am planning to visit more in the future.
+                        
+                    </p>
+                    <p class="mb-0">
+                        In my downtime, I enjoy playing playing drums, play videogames and building computers. 
+                        I like to stay in touch with my friends and family.
+                    </p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Certifications</h2>
+                    <ul class="list-inline dev-icons">
+                       
+                        <li class="list-inline-item"><img src="https://images.credly.com/size/680x680/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" alt="AWS Cloud Practitioner" class="certifications"  /></li>
+                        <li class="list-inline-item"><img src="https://images.credly.com/size/680x680/images/63482325-a0d6-4f64-ae75-f5f33922c7d0/CompTIA_A_2Bce.png" alt="CompTIA A+" class="certifications"  /></li>
+                        <li class="list-inline-item"><img src="https://images.credly.com/size/680x680/images/e1fc05b2-959b-45a4-8d20-124b1df121fe/CompTIA_Network_2Bce.png" alt="CompTIA Network+" class="certifications"  /></li>
+                        <li class="list-inline-item"><img src="https://images.credly.com/size/220x220/images/7f7657b9-4d1b-4b8d-b5ee-5fdf6d7ccd71/04294_CompTIA_Cert_Badges_Specialist_-_CIOS.png" alt="CompTIA Operations Specialist" class="certifications"  /></li><br>
+                        <li class="list-inline-item"><img src="https://images.credly.com/size/220x220/images/9d6a367b-6e05-4c70-99d6-26046056695f/GoogleCompTIA.png" alt="Google CompTIA" class="certifications"  /></li>
+                        <li class="list-inline-item"><img src="https://images.credly.com/size/220x220/images/fb97a12f-c0f1-4f37-9b7d-4a830199fe84/GCC_badge_IT_Support_1000x1000.png" alt="Google IT Support" class="certifications"  /></li>
+                        <li class="list-inline-item"><img src="https://images.credly.com/size/220x220/images/d41de2b7-cbc2-47ec-bcf1-ebecbe83872f/GCC_badge_DA_1000x1000.png" alt="Google Data Analytics" class="certifications"  /></li>
+                        
+
+                    </ul>
+                    <br>
+                    <label id="visitorLabel">You are visitor number .</label>
+                </div>
+            </section>
+        </div>
+        <!-- Visit Counter JS-->
+        <script src="dist/js/index.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="dist/js/scripts.js"></script>
     </body>
-
 </html>
