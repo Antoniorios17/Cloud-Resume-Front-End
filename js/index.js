@@ -3,7 +3,7 @@ const visitorLabel = document.getElementById("visitorLabel");
 // calls POST API to trigger Lambda function to add +1 visit to visit count attribute in DynamoDB
 async function increaseCount() {
   try{
-    let response = await fetch('https://n6cash4aob.execute-api.us-east-1.amazonaws.com/prod/counter', {
+    let response = await fetch('https://nhnmx80lae.execute-api.us-east-1.amazonaws.com/prod/counter', {
       headers: {
           "Content-Type": "application/json",
           },       
