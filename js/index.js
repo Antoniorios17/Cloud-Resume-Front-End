@@ -19,6 +19,7 @@ async function increaseCount() {
 
 // updates the visitor count to current visits after getting current
 // visit count from DynamoDB table
+
 async function setIncreaseCount() {
   try {
     let data = await increaseCount();
