@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#This script will automatically install jenkins
+#This script will automatically install jenkins and will start running on port 8080
 #it will not do any configuration
 
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
