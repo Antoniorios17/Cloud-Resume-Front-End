@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#This script will automatically install terraform in a computer running linux
+#This script will automatically install terraform
 
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 wget -O- https://apt.releases.hashicorp.com/gpg | \
