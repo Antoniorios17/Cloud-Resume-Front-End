@@ -1,4 +1,4 @@
-name : Upload website changes to s3
+name: Upload Website
 
 on:
   push:
