@@ -1,42 +1,19 @@
-const visitorLabel = document.getElementById("visitorLabel");
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
 
-// calls POST API to trigger Lambda function to add +1 visit to visit count attribute in DynamoDB
-async function increaseCount() {
-  try{
-    let response = await fetch('https://yfznhpscnnprxco4gazhgb5ilq0wudef.lambda-url.us-east-1.on.aws/', {
-      headers: {
-          "Content-Type": "application/json",
-          },       
-          method: "POST",
-      })
-      let data = await response.json();
-      return data;
-    }
-    catch(err) {
-      console.log(err);
-    }
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
+const counter = document.querySelector(".counter-number");
+async function updateCounter() {
+  let response = await fetch(
+      "https://yfznhpscnnprxco4gazhgb5ilq0wudef.lambda-url.us-east-1.on.aws/"
+  );
+  let data = await response.json();
+  counter.innerHTML = `Views: ${data}`;
 }
-
-// updates the visitor count to current visits after getting current
-// visit count from DynamoDB table
-
-async function setIncreaseCount() {
-  try {
-    let data = await increaseCount();
-    console.log(data)
-    let increasedCount = data.count;
-    document.getElementById("visitorLabel").innerHTML = `You are visitor number ${increasedCount}.`;
-  } catch(err) {
-    console.log(err);
-  }
-}
-
-// Calls function to update index.html with accurate visit count
-setIncreaseCount();
-
-// Calls function to add +1 visit count in DynamoDB
-// Returns value of count attribute in DynamoDB in response body
-increaseCount();
-
-// old endpoint: https://zfg8w7nleb.execute-api.us-east-1.amazonaws.com/prod/counter
-// new endpoint: https://n6cash4aob.execute-api.us-east-1.amazonaws.com/prod/counter
+updateCounter();
