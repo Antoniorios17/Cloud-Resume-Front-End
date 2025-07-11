@@ -11442,7 +11442,7 @@ section.resume-section .resume-section-content {
   }
 }
 .skills-icons {
-  width: 75px; /* Adjust the width as needed */
+  width: 100px; /* Adjust the width as needed */
   height: auto;
   vertical-align: middle;
   font-size: 4.5rem;
