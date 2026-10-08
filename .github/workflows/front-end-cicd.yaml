@@ -9,8 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: jakejarvis/s3-sync-action@master
+    - name: Checkout Repo
+      uses: actions/checkout@master
+    - name: Sync s3 bucket
+      uses: jakejarvis/s3-sync-action@master
     
       env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
