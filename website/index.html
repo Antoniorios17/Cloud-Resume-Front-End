@@ -7,6 +7,16 @@
         <meta name="image" property="og:image" content="dist\assets\img\profile1.jpg">
         <meta property="og:description" content="Antonio's portfolio, hosted in the AWS Cloud, built with Terraform. Automated front- and back-end with Jenkins workflows." />
         <title>Antonio's Cloud Resume Challenge</title>
+        <script>
+            (() => {
+                let theme;
+                try { theme = localStorage.getItem('theme'); } catch (error) {}
+                if (theme !== 'light' && theme !== 'dark') {
+                    theme = 'dark';
+                }
+                document.documentElement.dataset.theme = theme;
+            })();
+        </script>
         <link rel="icon" type="image/x-icon" href="dist/assets/img/profile1.jpg" />
         
         <!-- Font Awesome icons (free version)-->
@@ -39,6 +49,7 @@
                 </ul>
             </div>
         </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="true">Light mode</button>
         <!-- Page Content-->
         <div class="container-fluid p-3">
             <!-- About-->
