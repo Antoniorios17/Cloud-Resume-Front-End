@@ -1,5 +1,5 @@
-name: Upload Website
-run-name: Syncronise s3 bucket contents by @${{ github.actor }}
+name: Sync front-end contents 
+run-name: Synchronise S3 bucket contents by @${{ github.actor }}
 
 on:
   push:
