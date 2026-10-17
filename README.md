@@ -23,7 +23,7 @@ A personal résumé website built for the Cloud Resume Challenge, showcasing my 
 | Infrastructure | Terraform |
 | Deployment | GitHub Actions |
 
-This repository contains the static front end, its deployment workflow, and supporting installation scripts. The Terraform configuration and Lambda source are maintained outside this repository.
+This repository contains the static front end and its deployment workflow. The Terraform configuration and Lambda source are maintained outside this repository.
 
 ## AWS architecture
 
@@ -48,9 +48,6 @@ Route 53 handles DNS, CloudFront delivers the website over HTTPS, and S3 stores 
 .
 ├── .github/workflows/
 │   └── front-end-cicd.yaml    # GitHub Actions deployment
-├── Scripts/
-│   ├── Jenkins-install.sh    # Supporting setup script
-│   └── Terraform-install.sh  # Supporting setup script
 ├── website/
 │   ├── index.html            # Résumé content, navigation, and theme initialization
 │   └── dist/
